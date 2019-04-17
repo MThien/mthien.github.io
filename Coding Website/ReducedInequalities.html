@@ -1,0 +1,135 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="rstyle.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href="reducedinequalities.html"><i style="font-size:24px" class="fa">&#xf24e;</i>Reduced Inequalities</a>
+
+  <a href="qualityeducation.html"><i style="font-size:24px" class="fa">&#xf19d;</i>Quality Education</a>
+
+  <a href="link.html"><i style="font-size:24px" class="fa">&#xf0c1;</i>Link Between Goals</a>
+
+  <a href="#about"><i style="font-size:24px" class="fa">&#xf095;</i>Contact</a>
+</div>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="mikey6.jpg" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="mikey7.jpg" style="width:100%">
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="mikey8.jpg" style="width:100%">
+  <div class="text"></div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+<div class="flex-container">
+  <div>
+    <img src="mikey5.jpg" style="width:200%">      
+  </div>
+</div>
+<div class="flex-container1">
+  <div>
+    <p>In the world, something that is faced by women every day is job opportunities after school. Still, the average pay for a male worker with the same job as a female is drastically higher as can be seen in the first graph below. In addition, as can be seen in the second graph, the leadership opportunities for men are higher in every single industry, and regular job opportunities are higher in the majority of them for males. <br> <br>See the information in the graph below as well as the questions at the bottom for further information.</p>
+  </div>
+</div>
+<br>
+<div class="flex-container2">
+  <div>
+    <img src="mikey9.jpg" style="width:500%">
+  </div>
+</div>
+<div class="flex-container2">
+  <div>
+    <img src="mikey10.jpg" style="width:500%">
+  </div>
+</div>
+
+<br><br><br>
+<button class="accordion">What is the most common female occupation?</button>
+<div class="panel">
+  <p>The most common occupation for a female is a secretary/administrative assistant while the most common occupation for a male is a salesperson. Other common occupations of females and males reveal that the average pay for a male is far higher than for a female. Other common jobs for females are: Cashiers, Elementary/Middle School Teachers, Waiters, Nurses, and Salespeople.</p>
+</div>
+
+<button class="accordion">What is the difference between gender equity, gender equality and women’s empowerment?</button>
+<div class="panel">
+  <p>Gender equity is the process of being fair to women and men.Equity leads to equality. Gender equality requires equal enjoyment by women and men of socially-valued goods, opportunities, resources and rewards. Where gender inequality exists, it is generally women who are excluded or disadvantaged in relation to decision-making and access to economic and social resources.</p>
+</div>
+
+<button class="accordion">What is gender mainstreaming?</button>
+<div class="panel">
+  <p>Gender mainstreaming is a strategy for integrating gender concerns in the analysis, formulation and monitoring of policies, programmes and projects. It is therefore a means to an end, not an end in itself; a process, not a goal. The purpose of gender mainstreaming is to promote gender equality and the empowerment of women in population and development activities. A major part of this is adressing the roles of male and female figures in society. Gender mainstreaming should form advancements towards gender equality.</p>
+</div>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 3000); // Change image every 2 seconds
+}
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+</script>
+
+
+
+
+</body>
+</html>
