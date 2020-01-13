@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/8eb1bbd4d4.js" crossorigin="anonymous"></script>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- CSS Stylsheet -->
+    <link rel = "stylesheet" type = "text/css" href = "homepage.css" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Intellect Homepage</title>
+  </head>
+  <body>
+
+    <!-- Navbar, 4 options to choose from, 2 of them are main web app functions that will have more within them -->
+    <nav class="navbar navbar-expand-sm bg-warning navbar-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/profilepage/homepage.html">Intellect <img src="img/icon.png" width="40px"></a>
+        <!-- If screen is small enough, make the options on navbar a button  -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-sm-end" id="mainNav">
+          <div class="navbar-nav">
+            <a class="nav-item nav-link split" href=""><i class="fab fa-buffer"></i>Jokes</a>
+            <a class="nav-item nav-link split" href="#"><i class="fas fa-book-open"></i>Stories</a>
+            <a class="nav-item nav-link split" href="/profilepage/profilepage.html"><i class="fas fa-user-circle"></i>Profile</a>
+            <a class="nav-item nav-link" href="/aboutpage/aboutpage.html"><i class="fas fa-question-circle"></i>About</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Jumbotron as welcome message -->
+    <br>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div class="jumbotron jumbotron fluid">
+            <h1 class="display-1 text-white textjumbo">Welcome to Intellect <img src="img/icon.png" width="100px" class="inverted-logo"></h1>
+            <h2 class="lead text-white textjumbo">A place to crack a smile and find your happiness!</h2><br>
+            <!-- Button moves user jokes and filter website... why not make it the most lit button ever -->
+            <a class="rotate-button buttonjumbo">
+              <span class="rotate-button-face">Find</span>
+              <span class="rotate-button-face-back">A Joke</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cards with general info as well as seeing recent activity -->
+    <div class="container-fluid">
+      <div class="row">
+        <!-- "main" box to see recent activity -->
+        <div class="col-md-4 col-sm-12">
+          <div class="subtitle-box h1 text-muted">Recent Activity</div>
+          <ul class="list-group"> <!-- Items in list comes from database most recent things user has done, specific actions users have done are recorded (post, like), possibly things RELATED to the user as well (comment on user post), Max 15 -->
+            <li class="list-group-item-action border"></li>
+            <li class="list-group-item-action border"></li>
+            <li class="list-group-item-action border"></li>
+            <li class="list-group-item-action border"></li>
+            <li class="list-group-item-action border"></li>
+            <li class="list-group-item-action border"></li>
+            <li class="list-group-item-action border"></li>
+            <li class="list-group-item-action border"></li>
+            <li class="list-group-item-action border"></li>
+            <li class="list-group-item-action border"></li>
+            <li class="list-group-item-action border"></li>
+            <li class="list-group-item-action border"></li>
+            <li class="list-group-item-action border"></li>
+            <li class="list-group-item-action border"></li>
+            <li class="list-group-item-action border"></li>
+          </ul>
+        </div>
+        <!--  Slideshow with different points of info? -->
+        <div class= "col-md-8 cold-sm-12">
+          <div class="subtitle-box h1 text-muted">Info</div> 
+          <div id="carousel" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carousel" data-slide-to="0" class="active"></li>
+              <li data-target="#carousel" data-slide-to="1"></li>
+              <li data-target="#carousel" data-slide-to="2"></li>
+            </ol> 
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="img/slide1.png" class="d-block w-100">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>First slide label</h5>
+                  <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/slide2.png" class="d-block w-100">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Second slide label</h5>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="img/slide3.png" class="d-block w-100">
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Third slide label</h5>
+                  <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- joke category options - Located at the bottom because framework has a wierd bug that I can't place anywhere else -->
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col distance">
+          <div class="subtitle-box h1 text-muted">Popular Genres</div><br>
+          <div class="row">
+            <!-- Smaller pieces that are cards within this box -->
+            <div class="col-lg-3 col-sm-6">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <!-- d-flex makes element a flex box which allows me to use the "align-items-center" (vertical alignment) in the next div-->
+                  <div class="flip-card-front d-flex" style="background-image: url(img/card1.png);">
+                    <div class="card-font align-items-center"> <!-- The category shown comes from Firebase Database for most popular filters -->
+
+                    </div>
+                  </div>
+                  <div class="flip-card-back" style="background-image: url(img/card1.png);">
+                    <br><br><br><button type="button" class="btn btn-outline-dark btn-sm" href="#">Get These<br>Jokes</button> <!-- The url link will come from the categories url or in this case href "#", also from database -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front d-flex" style="background-image: url(img/card2.png);">
+                    <div class="card-font align-items-center"> 
+                      
+                    </div>
+                  </div>
+                  <div class="flip-card-back" style="background-image: url(img/card2.png);">
+                    <br><br><br><button type="button" class="btn btn-outline-dark btn-sm" href="#">Get These<br>Jokes</button> 
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front d-flex" style="background-image: url(img/card3.png);">
+                    <div class="card-font align-items-center"> 
+                      
+                    </div>
+                  </div>
+                  <div class="flip-card-back" style="background-image: url(img/card3.png);">
+                    <br><br><br><button type="button" class="btn btn-outline-dark btn-sm" href="#">Get These<br>Jokes</button> 
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+              <div class="flip-card">
+                <div class="flip-card-inner">
+                  <div class="flip-card-front d-flex" style="background-image: url(img/card4.png);">
+                    <div class="card-font align-items-center"> 
+                      
+                    </div>
+                  </div>
+                  <div class="flip-card-back" style="background-image: url(img/card4.png);">
+                    <br><br><br><button type="button" class="btn btn-outline-dark btn-sm" href="#">Get These<br>Jokes</button> 
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <br><br><br><br><br><br><br><br><br>
+
+    <!-- Run Personal Script -->
+    <script type="text/javascript" src="homepage.js"></script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
