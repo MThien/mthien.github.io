@@ -19,9 +19,9 @@
   <body>
 
     <!-- Navbar, 4 options to choose from, 2 of them are main web app functions that will have more within them -->
-    <nav class="navbar navbar-expand-sm bg-warning navbar-light">
+    <nav class="navbar fixed-top navbar-expand-sm bg-dark navbar-dark" style="position:fixed;width:100%;">
         <div class="container-fluid">
-          <a class="navbar-brand" href="/homepage/homepage.html">Intellect <img src="https://drive.google.com/open?id=1TeDbCml0hCQciUzv4j06NKapdc-iGu6IBQeIwwc7Sm0" width="40px"></a>
+          <a class="navbar-brand" href="/homepage/homepage.html" style="color: #b3b3b3">Intellect <img src="img/iconlight.png" width="40px"></a>
           <!-- If screen is small enough, make the options on navbar a button  -->
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainNav">
             <span class="navbar-toggler-icon"></span>
@@ -39,37 +39,34 @@
 
 
     <!-- joke category options - Located at the bottom because framework has a wierd bug that I can't place anywhere else -->
-    <div class="container-fluid">
+    <div class="container-fluid" style="padding-left:50px;padding-right:50px;padding-top: 75px;">
       <div class="row">
         <div class="col distance">
-          <div class="subtitle-box h1 text-muted">Personal Info</div><br>
+          <div class="subtitle-box h1 text-muted">Profile</div><br>
           <div class="progress">
             <div class="progress-bar bg-warning" role="progressbar" style="width: 85%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
           </div>
           <br>
              <div class="jumbotron">
-              <h2>Profile</h2>
+              <h2>Personal Info</h2>
                 <!---->
                 <div class="flex-box">
                     <div class="card" style="width: 18rem;">
                         <div class="card-body">
                         <h5 class="card-title">Username</h5>
                         <p class="card-text">supercoolmanz</p>
-                        <a href="#" class="btn btn-warning">Change</a>
+                        <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#changeUsername">
+                          Change
+                        </button>
                         </div>
                     </div>
                     <div class="card" style="width: 18rem;">
                         <div class="card-body">
                         <h5 class="card-title">Name</h5>
                         <p class="card-text">Guido van Rossum</p>
-                        <a href="#" class="btn btn-warning">Change</a>
-                        </div>
-                    </div>
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-body">
-                        <h5 class="card-title">Password</h5>
-                        <p class="card-text">**************</p>
-                        <a href="#" class="btn btn-warning">Change</a>
+                        <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#changeName">
+                          Change
+                        </button>
                         </div>
                     </div>
                 </div>
@@ -84,14 +81,18 @@
                           <div class="card-body">
                           <h5 class="card-title">Email</h5>
                           <p class="card-text">mrhoelcool@gmail.com</p>
-                          <a href="#" class="btn btn-warning">Change</a>
+                          <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#changeEmail">
+                            Change
+                          </button>
                           </div>
                       </div>
                       <div class="card" style="width: 18rem;">
                           <div class="card-body">
                           <h5 class="card-title">Phone #</h5>
                           <p class="card-text">416-111-1111</p>
-                          <a href="#" class="btn btn-warning">Change</a>
+                          <button type="button" class="btn btn-dark" data-toggle="modal" data-target="#changePhone">
+                            Change
+                          </button>
                           </div>
                       </div>
                   </div>
@@ -101,6 +102,118 @@
         </div>
       </div>
     </div>
+<!--BEGINNING OF PROFILE BUTTON FUNCTIONS-->
+    <!--Username-->
+    <div class="modal fade" id="changeUsername" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Change Username</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!--Inside of Username Modal-->
+            <form>
+              <div class="form-group">
+                <label for="exampleInputUsername1">Username</label>
+                <input type="username" class="form-control" id="exampleInputUsername1" aria-describedby="UsernameHelp" placeholder="Enter New Username">
+              </div>
+            </form>
+            <!--END Inside of Username Modal-->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-dark">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Name-->
+    <div class="modal fade" id="changeName" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Change Name</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!--Inside of Name Modal-->
+            <form>
+              <div class="form-group">
+                <label for="exampleInputName1">Name</label>
+                <input type="Name" class="form-control" id="exampleInputName1" aria-describedby="NameHelp" placeholder="Enter New Name">
+              </div>
+            </form>
+            <!--END Inside of Name Modal-->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-dark">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Email-->
+    <div class="modal fade" id="changeEmail" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Change Email</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!--Inside of Email Modal-->
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter New Email">
+                <small id="emailHelp" class="form-text text-muted">Optional</small>
+              </div>
+            </form>
+            <!--END Inside of Email Modal-->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-dark">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Phone Number-->
+    <div class="modal fade" id="changePhone" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Change Phone #</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <!--Inside of Phone# Modal-->
+            <form>
+              <div class="form-group">
+                <label for="exampleInputPhoneNumber1">Phone Number</label>
+                <input type="phonenumber" class="form-control" id="exampleInputPhoneNumber1" aria-describedby="PhoneNumberHelp" placeholder="Enter New Phone Number">
+                <small id="emailHelp" class="form-text text-muted">Optional</small>
+              </div>
+            </form>
+            <!--END Inside of Phone# Modal-->
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-warning" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-dark">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- END OF BUTTON FUNCTIONS-->
     
     <br><br><br><br><br><br><br><br><br>
 
